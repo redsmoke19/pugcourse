@@ -1,0 +1,35 @@
+// 07 - Подключаем данные для блока reviews
+
+include reviews-data
+
+section.reviews
+  .container
+    h2.reviews__title.section__title Отзывы
+    ul.reviews__list
+      li.reviews__item
+        .reviews__wrapper
+          .reviews__info
+            .reviews__box-images
+              img.reviews__img(src= reviews[0].photo alt='Фото автора отзыва' width='80' height='80')
+            .reviews__box
+              h3.reviews__name= reviews[0].name
+              p.reviews__count Купил #{reviews[0].booksCount} книг
+          p.reviews__review= reviews[0].review
+      li.reviews__item
+        .reviews__wrapper
+          .reviews__info
+            .reviews__box-images
+              img.reviews__img(src= reviews[1].photo alt='Фото автора отзыва' width='80' height='80')
+            .reviews__box
+              h3.reviews__name= reviews[1].name
+              p.reviews__count Купил #{reviews[1].booksCount} книг
+          p.reviews__review= reviews[1].review
+      li.reviews__item
+        .reviews__wrapper
+          .reviews__info
+            .reviews__box-images
+              img.reviews__img(src= reviews[2].photo alt='Фото автора отзыва' width='80' height='80')
+            .reviews__box
+              h3.reviews__name= reviews[2].name
+              p.reviews__count Купил #{reviews[2].booksCount} книг
+          p.reviews__review= reviews[2].review
