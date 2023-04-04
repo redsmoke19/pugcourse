@@ -1,0 +1,14 @@
+extends layout/layout
+
+block variables
+  - var title = "Книга Фигурная абстракция"
+  - var pageClass = "book-page"
+  - var pathContentImg = 'static/images/content/'
+  - var pathCommonImg = 'static/images/common/'
+
+block content
+  main(class=pageClass)
+    include modules/breadcrumbs
+    include modules/book/book
+    include modules/reviews/critique
+    include modules/recently-viewed/recently-viewed
